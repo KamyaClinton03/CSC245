@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Loads Mario font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Mario Kart Leaderboard</title>
@@ -9,12 +10,15 @@
 <body>
   <h1>Mario Kart Leaderboard</h1>
   <p>Click Win or Loss to update scores</p>
+  <button id="resetBtn">Reset Scores</button>
+  <!-- Navigation Bar -->
   <nav>
     <a href="index.html">Home</a> |
-    <a href="match.html">Random Matches</a>
+    <a href="matches.html">Random Matches</a>
   </nav>
   <!-- Table to show leaderboard -->
   <table id="leaderboard">
+    <!-- Table Header -->
     <tr>
       <th>Rank</th>
       <th>Player</th>
@@ -22,11 +26,11 @@
       <th>Win/Loss</th>
     </tr>
     <tbody id="leaderboardBody">
-      <!-- JavaScript will fill this -->
+
     </tbody>
   </table>
 
-  <!-- Link to JavaScript file -->
+  <!-- Links to JavaScript file -->
   <script src="data.js"></script>
   <script src="leaderbo.js"></script>
 </body>

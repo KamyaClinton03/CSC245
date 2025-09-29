@@ -66,6 +66,7 @@ tr:nth-child(even) {
 }
 
 /* Buttons */
+/* Win Button */
 .win-btn {
   background: #55efc4;
 }
@@ -75,7 +76,7 @@ tr:nth-child(even) {
   color: white;
 }
 
-/* Loss Button (red) */
+/* Loss Button */
 .loss-btn {
   background: #ff7675;
 }

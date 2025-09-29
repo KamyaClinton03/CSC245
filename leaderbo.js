@@ -1,3 +1,14 @@
+// Load players from local storage 
+function loadPlayers() {
+  const stored = localStorage.getItem("players");
+  if (stored) {
+    players = JSON.parse(stored);
+  }
+}
+// save players to local storage
+function savePlayers() {
+  localStorage.setItem("players", JSON.stringify(players));
+}
 
 // Render leaderboard table
 function renderLeaderboard() {
@@ -56,9 +67,21 @@ function updateScore(name, result) {
   } else if (result === "loss") {
     player.points -= 30;
   }
+  savePlayers(); 
   renderLeaderboard();
 }
 
+// Resets all players scores 
+function resetScores() {
+  players.forEach(player => {
+    player.points = 0;
+  });
+  savePlayers();     
+  renderLeaderboard(); 
+}
+document.getElementById("resetBtn").addEventListener("click", resetScores);
+
 // Run when page loads
+savePlayers(); 
 renderLeaderboard();
 
